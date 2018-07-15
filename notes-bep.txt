@@ -1,0 +1,27 @@
+
+
+Menu
+
+----
+
+
+* Top (main) is defined in page front matter + config.toml. Currently one level only.
+* Left side menu is section driven. Add toc_hide?
+
+
+
+List Page
+----
+
+* Blog has paginated "preview" list
+* Docs: Group By?
+
+
+
+
+
+Other
+----
+
+* Vendors in theme as sub-trees, probably
+* permalinks

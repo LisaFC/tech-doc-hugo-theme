@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ $allPagesInSection := where .Site.RegularPages "Section" .Section }}
+{{ $pag := .Paginate ($allPagesInSection.GroupByDate "2006")}}
+{{ $pageGroups := $pag.PageGroups}}
+{{ if eq $pag.PageNumber 1 }}
+{{ end }}
+<div class="row">
+	<div class="col-12">
+		{{ range $pageGroups }}
+		<h2>{{ T "post_posts_in" }} {{ .Key }}</h2>
+		<ul class="list-unstyled mt-4">
+			{{ range .Pages }}
+			<li class="media mb-4">
+				{{ partial "featured-image.html" (dict "p" . "w" 100 "h" 100 "class" "mr-3 border") }}
+				<div class="media-body">
+					<h5 class="mt-0 mb-1"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h5>
+					<p class="mb-1"><small class="text-muted">{{ .Date.Format ($.Param "time_format_blog") }} {{ T "ui_in"}} {{ .CurrentSection.LinkTitle }}</small></p>
+					{{ .Plain | safeHTML | truncate 200 }}
+				</div>
+			</li>
+			{{ end }}
+		</ul>
+		{{ end }}
+	</div>
+</div>
+
+<div class="row pl-2 pt-2">
+<div class="col">
+	{{ template "_internal/pagination.html" . }}
+</div>
+</div>
+{{ end }}

@@ -1,0 +1,9 @@
+{{ $w := .w | default 480 }}
+{{ $h := .h | default 180 }}
+{{ $p := .p }}
+{{ $class := .class | default "ml-3" }}
+{{ $image := ($p.Resources.ByType "image").GetMatch "*featured*" }}
+{{ with $image }}
+{{ $image := .Fill (printf "%dx%d" $w $h ) }}
+<img class="{{ $class }}" src="{{ $image.RelPermalink }}" alt="Featured Image for {{ $p.Title }}" width="{{ $image.Width }}" height="{{ $image.Height }}" style="width: {{ $image.Width }}px">
+{{ end }}

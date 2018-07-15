@@ -1,0 +1,11 @@
+{{ $icon := .Get "icon" | default "fa-lightbulb" }}
+<div class="col-lg-4 mb-5 mb-lg-0 pl-xl-5 text-center ">
+  <div class="mb-4 h3">
+    <i class="{{ if not (or (hasPrefix $icon "fas ") (hasPrefix $icon "fab ")) }}fas {{ end }}{{ $icon }}"></i>
+  </div>
+  <h4 class="h5">{{ .Get "title" | markdownify }}</h4>
+  <p class="mb-0 td-box-1">
+  	{{ .Inner }}
+  	{{ with .Get "url" }}<a href="{{ . }}">Read More ...</a>{{ end }}
+  </p>
+</div>

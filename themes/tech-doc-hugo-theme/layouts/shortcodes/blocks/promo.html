@@ -1,0 +1,19 @@
+{{ $promo_image := .Page.Resources.GetMatch "*.jpg" }}
+{{ $col_id := .Get "color" | default .Ordinal }}
+{{ $image_anchor := .Get "image_anchor" | default "smart" }}
+{{ $height := .Get "height" | default "max"  }}
+<section class="row td-cover-main-block td-cover-main-block--height-{{ $height }} td-overlay td-overlay--dark td-promo td-box--{{ $col_id }}" {{ with $promo_image }}style="background-image: url({{ (.Fill (printf "1200x600 %s" $image_anchor)).RelPermalink }});"{{ end }}>
+  <div class="container td-overlay__inner">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          {{ with .Get "title" }}<h1 class="display-sm-4 display-lg-3 mt-5">{{ . | html }}</h1>{{ end }}
+          {{ with .Get "subtitle" }}<p class="h6 text-uppercase mb-0">{{ . | html }}</p>{{ end }}
+          <div class="pt-3">
+            {{ .Inner }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

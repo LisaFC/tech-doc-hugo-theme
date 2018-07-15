@@ -1,0 +1,38 @@
+// Cover is a full size cover with a fixed background for smaller screens.
+
+.td-cover-main-block {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    background: {
+        repeat: no-repeat;
+        position: 50% 0;
+        size: cover;
+    };
+
+    &--height-min {
+        min-height: 450px;
+    }
+
+    &--height-med {
+        min-height: 500px;
+    }
+
+     &--height-max {
+        min-height: 650px;
+    }
+
+    &--height-full {
+        min-height: 100vh;
+    }
+
+    @include media-breakpoint-down(lg) {
+        & {
+            background: {
+                attachment: fixed;
+            };
+        }
+    }
+}
