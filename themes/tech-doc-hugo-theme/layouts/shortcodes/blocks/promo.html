@@ -1,6 +1,7 @@
 {{ $promo_image := (.Page.Resources.ByType "image").GetMatch "**background*" }}
 {{ $col_id := .Get "color" | default .Ordinal }}
 {{ $image_anchor := .Get "image_anchor" | default "smart" }}
+{{/* Height can be one of: auto, min, med, max, full. */}}
 {{ $height := .Get "height" | default "max"  }}
 <section class="row td-cover-main-block td-cover-main-block--height-{{ $height }} td-overlay td-overlay--dark td-promo td-box--{{ $col_id }}" {{ with $promo_image }}style="background-image: url({{ (.Fill (printf "1200x600 %s" $image_anchor)).RelPermalink }});"{{ end }}>
   <div class="container td-overlay__inner">

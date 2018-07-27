@@ -5,12 +5,13 @@
     min-height: 100vh;
     padding-top: 5rem;
     padding-bottom: 5rem;
-
     background: {
         repeat: no-repeat;
         position: 50% 0;
         size: cover;
     };
+
+    &--height-auto {}
 
     &--height-min {
         min-height: 450px;
@@ -20,7 +21,7 @@
         min-height: 500px;
     }
 
-     &--height-max {
+    &--height-max {
         min-height: 650px;
     }
 
