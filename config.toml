@@ -68,7 +68,7 @@ gcs_engine_id = "014583317891497673012:8dafxiprmtq"
 # Enable to show the side bar menu in its compact state.
 sidebar_menu_compact = false
 #  Set to true to disable breadcrumb navigation.
-breadcrumb_disabled = false
+breadcrumb_disable = false
 
 [params.links]
 # End user relevant links. These will show up on left side of footer.
