@@ -11,11 +11,12 @@
 		<ul class="list-unstyled mt-4">
 			{{ range .Pages }}
 			<li class="media mb-4">
-				{{ partial "featured-image.html" (dict "p" . "w" 100 "h" 100 "class" "mr-3 border") }}
 				<div class="media-body">
 					<h5 class="mt-0 mb-1"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h5>
-					<p class="mb-1"><small class="text-muted">{{ .Date.Format ($.Param "time_format_blog") }} {{ T "ui_in"}} {{ .CurrentSection.LinkTitle }}</small></p>
-					{{ .Plain | safeHTML | truncate 200 }}
+					<p class="mb-2"><small class="text-muted">{{ .Date.Format ($.Param "time_format_blog") }} {{ T "ui_in"}} {{ .CurrentSection.LinkTitle }}</small></p>
+					{{ partial "featured-image.html" (dict "p" . "w" 100 "h" 100 "class"  "border float-left mr-2") }}
+					{{ .Plain | safeHTML | truncate 300 }}
+					<p class="pt-2"><a href="{ .RelPermalink }}">{{ T "ui_read_more"}}</a></p>
 				</div>
 			</li>
 			{{ end }}
@@ -23,10 +24,9 @@
 		{{ end }}
 	</div>
 </div>
-
 <div class="row pl-2 pt-2">
-<div class="col">
-	{{ template "_internal/pagination.html" . }}
-</div>
+	<div class="col">
+		{{ template "_internal/pagination.html" . }}
+	</div>
 </div>
 {{ end }}

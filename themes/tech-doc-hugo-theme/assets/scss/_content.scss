@@ -57,15 +57,8 @@
 
 
     > .lead, > h1, > h2, > ul, > ol, > p, > blockquote, > dl dd, .footnotes {
+        @extend .td-max-width-on-larger-screens;
 
-        @include media-breakpoint-up(lg) {
-            max-width: 80%;
-        }
-
-
-        @include media-breakpoint-up(xl) {
-            max-width: 70%;
-        }
     }
 
     .lead {

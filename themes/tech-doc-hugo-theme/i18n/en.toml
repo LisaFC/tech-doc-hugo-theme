@@ -8,7 +8,7 @@ other = "Previous"
 [ui_pager_next]
 other = "Next"
 
-[ui_read_mode]
+[ui_read_more]
 other = "Read More"
 
 [ui_search]
@@ -17,7 +17,6 @@ other = "Search this site…"
 # Used in sentences such as "Posted in News"
 [ui_in]
 other = "in"
-
 
 # Footer text
 [footer_all_rights_reserved]
