@@ -32,7 +32,6 @@
         width: 100%;
     }
 
-
     .navbar-brand {
         text-transform: none;
         text-align: middle;
@@ -54,7 +53,7 @@
         font-weight: $font-weight-bold;
 
         span.active {
-            border-bottom: 3px solid $secondary;
+            border-bottom: 4px solid $secondary;
         }
     }
 

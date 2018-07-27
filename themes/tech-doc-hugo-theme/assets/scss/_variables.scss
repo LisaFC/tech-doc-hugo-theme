@@ -6,6 +6,7 @@ See https://github.com/twbs/bootstrap/pull/23260
 
 @fa-font-path :        "../webfonts";
 
+
 // Bootstrap flags. For more, see https://getbootstrap.com/docs/4.0/getting-started/theming/
 $enable-gradients: true;
 $enable-rounded: true;
@@ -45,7 +46,11 @@ $border-color: $gray-300 !default;
 $td-sidebar-bg-color: lighten($primary, 60%) !default;
 $td-sidebar-border-color: $border-color !default;
 
-$td-box-colors: $primary, $dark, $secondary, $primary-light, $success, $dark, $primary, $secondary, $primary-light, $info;
+
+// Background colors for the sections on home page etc. It is a paint by number system, starting at 0, where the number is taken from the shortcode's ordinal
+// if not provided by the user.
+// These colors are all part of the theme palette, but the mix is fairly random to create variation. This can be overridden by the project if needed.
+$td-box-colors: $primary, $dark, $secondary, $info, $primary-light, $gray-600, $success, $warning, $dark, $danger, $primary, $secondary, $primary-light, $info;
 
 $link-color: $blue !default;
 $link-decoration: none !default;
@@ -57,7 +62,14 @@ $link-hover-decoration: none !default;
 $google_font_name: "Open Sans";
 $google_font_family: "Open+Sans:300,400,400i,700,700i";
 $web-font-path: "https://fonts.googleapis.com/css?family=#{$google_font_family}";
-$font-family-sans-serif: "#{$google_font_name}", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$td-fonts-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+@if $td-enable-google-fonts {
+	$td-fonts-serif: prepend($td-fonts-serif, "#{$google_font_name}");
+}
+$font-family-sans-serif: $td-fonts-serif !default;
+
+
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 $font-size-base: 1rem !default;
@@ -67,6 +79,7 @@ $font-weight-normal: 400 !default;
 $font-weight-medium: 500 !default;
 $font-weight-bold: 700 !default;
 $font-weight-body-text: $font-weight-normal !default;
+
 
 // Space
 
