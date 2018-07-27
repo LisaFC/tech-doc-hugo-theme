@@ -1,4 +1,4 @@
-{{ $promo_image := .Page.Resources.GetMatch "*.jpg" }}
+{{ $promo_image := (.Page.Resources.ByType "image").GetMatch "**background*" }}
 {{ $col_id := .Get "color" | default .Ordinal }}
 {{ $image_anchor := .Get "image_anchor" | default "smart" }}
 {{ $height := .Get "height" | default "max"  }}
