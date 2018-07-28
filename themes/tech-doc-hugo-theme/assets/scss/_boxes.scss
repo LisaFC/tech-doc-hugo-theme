@@ -9,10 +9,6 @@
         &--#{$j} {
             color: $text-color;
             background-color: #{$c};
-
-            a {
-                color: darken($text-color, 20%);
-            }
         }
 
         &--height-auto {
@@ -40,10 +36,6 @@
         .td-box-gradient-#{$j} {
             color: $text-color;
             background-color: #{$c};
-
-            a {
-                color: darken($text-color, 20%);
-            }
         }
     }
 }
@@ -58,10 +50,6 @@
         .td-box-gradient {
             &--#{$j} {
                 color: $text-color;
-
-                a {
-                    color: darken($text-color, 20%);
-                }
             }
         }
 

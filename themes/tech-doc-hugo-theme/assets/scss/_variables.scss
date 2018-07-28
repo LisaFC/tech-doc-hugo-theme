@@ -18,18 +18,18 @@ $td-enable-google-fonts: true;
 
 // Theme colors
 
-$primary: #474973 !default;
+$primary: #F75C03 !default;
 $primary-light: lighten($primary, 75%) !default;
-$secondary: #9C528B !default;
-$success: #63A375 !default;
+$secondary: #FFC857 !default;
+$success: #3772FF !default;
 $info: #7C9EB2 !default;
-$warning: #F68E5F !default;
-$danger: #F76C5E !default;
+$warning: #FFBA49 !default;
+$danger: #DF2935 !default;
 $white: #fff !default;
 $light: $primary-light !default;
 
-$dark: #1D1E2C;
-$blue: #335C81;
+$dark: #080708;
+$blue: #3772FF;
 $gray-100: #f8f9fa !default;
 $gray-200: #eee !default;
 $gray-300: #dee2e6 !default;
@@ -46,7 +46,7 @@ $code-color: $gray-700;
 // UI element colors
 
 $border-color: $gray-300 !default;
-$td-sidebar-bg-color: lighten($primary, 60%) !default;
+$td-sidebar-bg-color: lighten($primary, 73%) !default;
 $td-sidebar-border-color: $border-color !default;
 
 
@@ -102,10 +102,10 @@ $display1-weight:             $font-weight-bold !default;
 $display2-weight:             $font-weight-bold !default;
 $display3-weight:             $font-weight-bold !default;
 $display4-weight:             $font-weight-bold !default;
-$display1-size:               4.0rem !default;
-$display2-size:               3.5rem !default;
-$display3-size:               3.0rem !default;
-$display4-size:               2.5rem !default;
+$display1-size:               3.0rem !default;
+$display2-size:               2.5rem !default;
+$display3-size:               2.0rem !default;
+$display4-size:               1.75rem !default;
 
 // Space
 

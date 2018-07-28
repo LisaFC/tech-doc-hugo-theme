@@ -1,0 +1,23 @@
+// Add some local palette classes so you can do .td-warning etc.
+
+
+@each $color, $value in $colors {
+  .td-#{$color} {
+    color: color-yiq($value);
+    background-color: #{$value};
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .td-#{$color} {
+    color: color-yiq($value);
+    background-color: #{$value};
+  }
+}
+
+@each $color, $value in $grays {
+  .td-#{$color} {
+    color: color-yiq($value);
+    background-color: #{$value};
+  }
+}
