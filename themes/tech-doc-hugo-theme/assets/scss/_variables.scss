@@ -13,9 +13,11 @@ $enable-rounded: true;
 $enable-shadows: true;
 
 // Theme flags.
+
 $td-enable-google-fonts: true;
 
 // Theme colors
+
 $primary: #474973 !default;
 $primary-light: lighten($primary, 75%) !default;
 $secondary: #9C528B !default;
@@ -42,6 +44,7 @@ $black: #000 !default;
 $code-color: $gray-700;
 
 // UI element colors
+
 $border-color: $gray-300 !default;
 $td-sidebar-bg-color: lighten($primary, 60%) !default;
 $td-sidebar-border-color: $border-color !default;
@@ -74,18 +77,41 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 $font-family-base: $font-family-sans-serif !default;
 $font-size-base: 1rem !default;
 
+// Font weights
+
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-medium: 500 !default;
 $font-weight-bold: 700 !default;
-$font-weight-body-text: $font-weight-normal !default;
 
+$font-weight-body-text: $font-weight-normal !default;
+$headings-font-weight: $font-weight-medium !default;
+
+// Heading sizes
+
+$h1-font-size:                $font-size-base * 2.25 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+// Display styles
+
+$display1-weight:             $font-weight-bold !default;
+$display2-weight:             $font-weight-bold !default;
+$display3-weight:             $font-weight-bold !default;
+$display4-weight:             $font-weight-bold !default;
+$display1-size:               4.0rem !default;
+$display2-size:               3.5rem !default;
+$display3-size:               3.0rem !default;
+$display4-size:               2.5rem !default;
 
 // Space
 
-$td-spacer: 1rem;
-$td-block-space-top: 5 * $td-spacer;
-$td-block-space-bottom: 5 * $td-spacer;
+$spacer: 1rem;
+$td-block-space-top-base: 4 * $spacer;
+$td-block-space-bottom-base: 4 * $spacer;
 
 // Pagination
 
@@ -100,11 +126,9 @@ $navbar-dark-color: $white !default;
 $navbar-dark-hover-color: $white !default;
 $navbar-dark-active-color: $white !default;
 
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
 $yiq-contrasted-threshold: 200 !default;
 
 // See https://github.com/twbs/bootstrap/pull/23260
 $theme-colors: () !default;
 $theme-colors: map-merge((primary: $primary, secondary: $secondary, success: $success, info: $info, warning: $warning, danger: $danger, light: $light), $theme-colors);
-
-$colors: () !default;
-$colors: map-merge((blue: $primary), $colors);

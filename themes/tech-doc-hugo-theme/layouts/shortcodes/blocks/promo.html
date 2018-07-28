@@ -8,9 +8,9 @@
     <div class="row">
       <div class="col-12">
         <div class="text-center">
-          {{ with .Get "title" }}<h1 class="display-sm-4 display-lg-3 mt-5">{{ . | html }}</h1>{{ end }}
-          {{ with .Get "subtitle" }}<p class="h6 text-uppercase mb-0">{{ . | html }}</p>{{ end }}
-          <div class="pt-3">
+          {{ with .Get "title" }}<h1 class="display-1 display-sm-3 mt-0 mt-md-5 pb-4">{{ . | html }}</h1>{{ end }}
+          {{ with .Get "subtitle" }}<p class="display-2 text-uppercase mb-0">{{ . | html }}</p>{{ end }}
+          <div class="pt-3 lead">
             {{ .Inner }}
           </div>
         </div>
