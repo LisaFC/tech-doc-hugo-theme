@@ -4,6 +4,11 @@ title: "Let’s celebrate Hugo’s 5th birthday"
 linkTitle: "Hugo's 5th"
 description: "How a side project became one of the most popular frameworks for building websites."
 author: Bjørn Erik Pedersen ([@bepsays](https://twitter.com/bepsays))
+resources:
+- src: "**.png"
+  title: "Image #:counter"
+  params:
+    byline: "Photo: Bjørn Erik Pedersen / CC-BY-CA"
 ---
 
 **Five years ago today, [Steve Francia](https://github.com/spf13/) made his [first commit](https://github.com/gohugoio/hugo/commit/50a1d6f3f155ab837310e00ffb309a9199773c73

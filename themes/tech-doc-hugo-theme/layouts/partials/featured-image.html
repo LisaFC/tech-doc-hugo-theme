@@ -5,5 +5,10 @@
 {{ $image := ($p.Resources.ByType "image").GetMatch "**featured*" }}
 {{ with $image }}
 {{ $image := .Fill (printf "%dx%d" $w $h ) }}
-<img class="{{ $class }}" src="{{ $image.RelPermalink }}" alt="Featured Image for {{ $p.Title }}" width="{{ $image.Width }}" height="{{ $image.Height }}" style="width: {{ $image.Width }}px">
+<figure class="{{ $class }}" style="width: {{ $image.Width }}px">
+<img src="{{ $image.RelPermalink }}" alt="Featured Image for {{ $p.Title }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+{{ with $image.Params.byline }}
+ <figcaption class="mt-2 mt-md-0"><small class="text-muted">{{ . | html }}</small></figcaption>
+{{ end }}
+</figure>
 {{ end }}
