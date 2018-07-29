@@ -5,6 +5,7 @@
         color: color-yiq($value);
         background-color: #{$value};
     }
+
     .td-text-#{$color} {
         color: color-yiq($value);
     }
@@ -15,6 +16,7 @@
         color: color-yiq($value);
         background-color: #{$value};
     }
+
     .td-text-#{$color} {
         color: color-yiq($value);
     }
@@ -25,7 +27,24 @@
         color: color-yiq($value);
         background-color: #{$value};
     }
+
     .td-text-#{$color} {
         color: color-yiq($value);
+    }
+}
+
+// This allows "painting by numbers", i.e. picking colors by a shortcode Ordianal.
+@for $i from 1 through length($td-box-colors) {
+    $value: nth($td-box-colors, $i);
+    $name: $i - 1;
+    $text-color: color-yiq($value);
+
+    .td-#{$name} {
+        color: $text-color;
+        background-color: #{$value};
+    }
+
+    .td-text-#{$name} {
+        color: $text-color;
     }
 }

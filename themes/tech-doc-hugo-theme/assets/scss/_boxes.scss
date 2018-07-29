@@ -1,58 +1,24 @@
 // Boxes on the home page and similar.
 
+@include td-box-height-modifiers(".td-box");
+
+// This allows "painting by numbers"
 @for $i from 1 through length($td-box-colors) {
     $c: nth($td-box-colors, $i);
-    $j: $i - 1;
-    $text-color: color-yiq($c);
-
-    .td-box {
-        &--#{$j} {
-            color: $text-color;
-            background-color: #{$c};
-        }
-
-        &--height-auto {
-           
-        }
-
-        &--height-min {
-            min-height: 450px;
-        }
-
-        &--height-med {
-            min-height: 500px;
-        }
-
-        &--height-max {
-            min-height: 650px;
-        }
-
-        &--height-full {
-            min-height: 100vh;
-        }
-    }
-
-    @if not $enable-gradients {
-        .td-box-gradient-#{$j} {
-            color: $text-color;
-            background-color: #{$c};
-        }
-    }
+    $name: $i - 1;
+ 
+    @include box-variant(".td-box", $name, $c);
 }
 
-@if $enable-gradients {
-    @for $i from 1 through length($td-box-colors) {
-        $c: nth($td-box-colors, $i);
-        $j: $i - 1;
-        $text-color: color-yiq($c);
+// Same as above with all the theme color names.
+@each $color, $value in $colors {
+     @include box-variant(".td-box", $color, $value);
+}
 
-        // Alow the .td-box-gradient class to be used on its own.
-        .td-box-gradient {
-            &--#{$j} {
-                color: $text-color;
-            }
-        }
+@each $color, $value in $theme-colors {
+     @include box-variant(".td-box", $color, $value);
+}
 
-        @include bg-gradient-variant(".td-box-gradient--#{$j}", $c);
-    }
+@each $color, $value in $grays {
+     @include box-variant(".td-box", $color, $value);
 }

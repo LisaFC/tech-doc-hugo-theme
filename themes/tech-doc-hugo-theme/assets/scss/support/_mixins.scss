@@ -1,0 +1,103 @@
+// Some simple mixins.
+
+@mixin bg-gradient-variant($parent, $color) {
+    #{$parent} {
+        background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x !important;
+    }
+}
+
+@mixin box-variant($parent, $color-name, $color-value) {
+    $text-color: color-yiq($color-value);
+
+    #{$parent} {
+        &--#{$color-name} {
+            color: $text-color;
+            background-color: #{$color-value};
+        }
+    }
+
+    @if not $enable-gradients {
+        #{$parent}-gradient {
+            &--#{$color-name} {
+                color: $text-color;
+                background-color: #{$color-value};
+            }
+        }
+    }
+
+    @if $enable-gradients {
+        // Alow the .td-box-gradient class to be used on its own.
+        #{$parent}-gradient {
+            &--#{$color-name} {
+                color: $text-color;
+            }
+        }
+
+        @include bg-gradient-variant("#{$parent}-gradient--#{$color-name}", $color-value);
+    }
+}
+
+// Common min-height modifiers used for boxes.
+@mixin td-box-height-modifiers($parent) {
+    #{$parent} {
+        &--height-auto {}
+
+        &--height-min {
+            min-height: 300px;
+        }
+
+        &--height-med {
+            min-height: 400px;
+        }
+
+        &--height-max {
+            min-height: 500px;
+        }
+
+        &--height-full {
+            min-height: 100vh;
+        }
+
+        @include media-breakpoint-up(md) {
+            &--height-min {
+                min-height: 450px;
+            }
+
+            &--height-med {
+                min-height: 500px;
+            }
+
+            &--height-max {
+                min-height: 650px;
+            }
+        }
+    }
+}
+
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+// placeholder allows styling of the placeholder used in search input etc.
+@mixin placeholder {
+    @include optional-at-root("::-webkit-input-placeholder") {
+        @content;
+    }
+
+
+    @include optional-at-root(":-moz-placeholder") {
+        @content;
+    }
+
+
+    @include optional-at-root("::-moz-placeholder") {
+        @content;
+    }
+
+
+    @include optional-at-root(":-ms-input-placeholder") {
+        @content;
+    }
+}

@@ -5,7 +5,7 @@ linkTitle: "Hugo's 5th"
 description: "How a side project became one of the most popular frameworks for building websites."
 author: Bjørn Erik Pedersen ([@bepsays](https://twitter.com/bepsays))
 resources:
-- src: "**.png"
+- src: "**.{png,jpg}"
   title: "Image #:counter"
   params:
     byline: "Photo: Bjørn Erik Pedersen / CC-BY-CA"

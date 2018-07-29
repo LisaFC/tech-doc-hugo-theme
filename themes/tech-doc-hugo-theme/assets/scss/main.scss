@@ -1,7 +1,7 @@
-@import "functions";
-@import "mixins";
+@import "support/functions";
 @import "variables";
 @import "variables_project";
+@import "support/mixins";
 
 @import "../vendor/bootstrap/scss/bootstrap";
 
@@ -9,7 +9,7 @@
 @import "../vendor/Font-Awesome//web-fonts-with-css/scss/fa-solid.scss";
 @import "../vendor/Font-Awesome//web-fonts-with-css/scss/fa-brands.scss";
 
-@import "utilities";
+@import "support/utilities";
 @import "colors";
 @import "boxes";
 @import "blog";
