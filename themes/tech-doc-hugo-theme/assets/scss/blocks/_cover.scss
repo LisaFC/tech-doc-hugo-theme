@@ -1,8 +1,8 @@
-// Cover is a full size cover with a fixed background for smaller screens.
+// A cover block is a full size cover with a fixed background for smaller screens.
 
-@include td-box-height-modifiers(".td-cover-main-block");
+@include td-box-height-modifiers(".td-cover-block");
 
-.td-cover-main-block {
+.td-cover-block {
     position: relative;
     padding-top: 5rem;
     padding-bottom: 5rem;
