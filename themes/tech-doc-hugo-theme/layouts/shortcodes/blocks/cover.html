@@ -8,7 +8,7 @@
 {{ $.Scratch.Set "promo_image" $promo_image_scaled }}
 <link rel="preload" href="{{ $promo_image_scaled.RelPermalink }}" as="image">
 {{ end }}
-<section class="row td-cover-block td-coverblock--height-{{ $height }} js-td-promo td-overlay td-overlay--dark -bg-color-{{ $col_id }}" {{ with $.Scratch.Get "promo_image" }}style="background-image: url({{ .RelPermalink }});"{{ end }}>
+<section class="row td-cover-block td-cover-block--height-{{ $height }} js-td-cover td-overlay td-overlay--dark -bg-{{ $col_id }}" {{ with $.Scratch.Get "promo_image" }}style="background-image: url({{ .RelPermalink }});"{{ end }}>
   <div class="container td-overlay__inner">
     <div class="row">
       <div class="col-12">

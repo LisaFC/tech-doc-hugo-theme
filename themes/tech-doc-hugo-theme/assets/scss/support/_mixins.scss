@@ -8,11 +8,22 @@
 
 @mixin box-variant($parent, $color-name, $color-value) {
     $text-color: color-yiq($color-value);
+    $link-color: darken($text-color, 40%);
 
     #{$parent} {
         &--#{$color-name} {
             color: $text-color;
             background-color: #{$color-value};
+
+            a {
+                color: $link-color;
+            }
+        }
+    }
+
+    #{$parent}-gradient {
+        a {
+            color: $link-color;
         }
     }
 

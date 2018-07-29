@@ -1,5 +1,5 @@
-{{ $promo := .HasShortcode "blocks/promo" }}
-<nav class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $promo}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
+{{ $cover := .HasShortcode "blocks/cover" }}
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark {{ if $cover}} td-navbar-cover {{ end }}flex-column flex-md-row td-navbar">
 	<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 		{{ (resources.Get "icons/logo.svg" | minify).Content | safeHTML }} <span class="text-uppercase font-weight-bold">{{ .Site.Title }}</span>
 	</a>

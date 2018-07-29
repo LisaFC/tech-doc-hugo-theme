@@ -18,7 +18,7 @@
 
     // Bootstrap Fixed Header
     $(function() {
-        var promo = $(".js-td-promo");
+        var promo = $(".js-td-cover");
         if (!promo.length) {
             return
         }
@@ -34,7 +34,7 @@
 
         $(window).on('scroll', function() {
             var navtop = $('.js-navbar-scroll').offset().top - $(window).scrollTop();
-            var promoOffset = bottomPos($('.js-td-promo'));
+            var promoOffset = bottomPos($('.js-td-cover'));
             var navbarOffset = $('.js-navbar-scroll').offset().top;
             if ((promoOffset - navbarOffset) < threshold) {
                 $('.js-navbar-scroll').addClass('navbar-bg-onscroll');
