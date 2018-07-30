@@ -1,6 +1,10 @@
 {{ define "main" }}
-{{ $allPagesInSection := where .Site.RegularPages "Section" .Section }}
-{{ $pag := .Paginate ($allPagesInSection.GroupByDate "2006")}}
+{{ if .Parent.IsHome }}
+{{ $.Scratch.Set "blog-pages" (where .Site.RegularPages "Section" .Section) }}
+{{ else }}
+{{$.Scratch.Set "blog-pages" .Pages }}
+{{ end }}
+{{ $pag := .Paginate (( $.Scratch.Get "blog-pages").GroupByDate "2006")}}
 {{ $pageGroups := $pag.PageGroups}}
 {{ if eq $pag.PageNumber 1 }}
 {{ end }}
