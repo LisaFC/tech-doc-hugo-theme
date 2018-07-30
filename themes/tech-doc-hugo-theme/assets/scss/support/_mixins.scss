@@ -6,26 +6,35 @@
     }
 }
 
+@mixin link-variant($parent, $color, $hover-color, $underline: false) {
+    #{$parent} {
+        color: $color;
+
+        @if $underline {
+            text-decoration: underline;
+        }
+
+        @include hover-focus {
+            color: $hover-color;
+        }
+    }
+}
+
+// box-variant creates the main style for a colored section used on the site.
 @mixin box-variant($parent, $color-name, $color-value) {
     $text-color: color-yiq($color-value);
-    $link-color: darken($text-color, 40%);
+    $link-color: mix($text-color, $blue, 50%);
+    $link-hover-color: rgba($link-color, .5) !default;
 
     #{$parent} {
         &--#{$color-name} {
             color: $text-color;
             background-color: #{$color-value};
-
-            a {
-                color: $link-color;
-            }
         }
     }
 
-    #{$parent}-gradient {
-        a {
-            color: $link-color;
-        }
-    }
+    @include link-variant("#{$parent}--#{$color-name} a", $link-color, $link-hover-color, false);
+    @include link-variant("#{$parent}-gradient--#{$color-name} a", $link-color, $link-hover-color, false);
 
     @if not $enable-gradients {
         #{$parent}-gradient {
