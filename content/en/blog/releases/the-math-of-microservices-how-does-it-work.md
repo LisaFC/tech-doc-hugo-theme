@@ -1,6 +1,6 @@
 
 ---
-title: "The Math Of Microservices: How Does It Work?"
+title: "The #33 release"
 linkTitle: "Release #33"
 date: 2015-01-05
 description: >

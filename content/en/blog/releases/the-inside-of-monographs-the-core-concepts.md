@@ -1,7 +1,7 @@
 
 ---
-title: "The Inside Of Monographs: The Core Concepts"
-linkTitle: "The Inside Of Monographs"
+title: "The Release: The Core Concepts"
+linkTitle: "The Release Of The Core Concepts"
 date: 2016-01-04
 description: >
   A short lead descripton about this content page. Text here can also be **bold** or _italic_ and can even be split over multiple paragraphs.

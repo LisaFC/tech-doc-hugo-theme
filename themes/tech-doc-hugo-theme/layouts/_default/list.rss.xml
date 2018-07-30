@@ -17,12 +17,17 @@
     {{ with .OutputFormats.Get "RSS" }}
 	  {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ .Scratch.Set "rss_types" (slice .Section) }}
     {{ if not $.Section }}
       {{ $sections := .Site.Params.rss_sections | default (slice "blog") }}
-      {{ .Scratch.Set "rss_types" $sections }}
+      {{ .Scratch.Set "rss_pages" (first 50 (where $.Site.RegularPages "Type" "in" $sections )) }}
+    {{ else }}
+      {{ if $.Parent.IsHome }}
+        {{ .Scratch.Set "rss_pages" (first 50 (where $.Site.RegularPages "Type" $.Section )) }}
+      {{ else }}
+        {{ .Scratch.Set "rss_pages" (first 50 $.Pages) }}
+      {{ end }}
     {{ end }}
-    {{ range first 50 (where .Site.RegularPages "Type" "in" (.Scratch.Get "rss_types")) }}
+    {{ range (.Scratch.Get "rss_pages")  }}
     <item>
       <title>{{ .Section | title }}: {{ .Title }}</title>
       <link>{{ .Permalink }}</link>

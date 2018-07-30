@@ -1,6 +1,6 @@
 
 ---
-title: "Another Great Release"
+title: "The great #32 release"
 linkTitle: "Release #32"
 date: 2015-01-06
 description: >
