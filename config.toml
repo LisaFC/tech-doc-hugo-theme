@@ -61,7 +61,7 @@ privacy_policy = "https://policies.google.com/privacy"
 github_repo = "https://github.com/bep/tech-doc-hugo"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "014583317891497673012:8dafxiprmtq"
+gcs_engine_id = "011737558837375720776:fsdu1nryfng"
 
 # User interface configuration
 [params.ui]
