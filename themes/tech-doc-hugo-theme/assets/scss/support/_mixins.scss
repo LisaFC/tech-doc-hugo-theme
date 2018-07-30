@@ -33,8 +33,9 @@
         }
     }
 
-    @include link-variant("#{$parent}--#{$color-name} a", $link-color, $link-hover-color, false);
-    @include link-variant("#{$parent}-gradient--#{$color-name} a", $link-color, $link-hover-color, false);
+    // Improve contrast for the links in paragraphs.
+    @include link-variant("#{$parent}--#{$color-name} p > a", $link-color, $link-hover-color, false);
+    @include link-variant("#{$parent}-gradient--#{$color-name} p > a", $link-color, $link-hover-color, false);
 
     @if not $enable-gradients {
         #{$parent}-gradient {
