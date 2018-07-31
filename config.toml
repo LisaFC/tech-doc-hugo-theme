@@ -52,10 +52,25 @@ anchor = "smart"
 # Uncomment and insert your GA tracking ID to enable.
 # id = "INSERT ID"
 
+# Language configuration
+
+[languages]
+[languages.en]
+title = "TechOS"
+description = "TechOS is containers revisited"
+languageName ="English"
+# Weight used for sorting.
+weight = 1
+[languages.no]
+title = "TechOS"
+description = "TecOS er operativsystem for skyen"
+languageName ="Norsk"
+contentDir = "content/no"
+
+
 # Everything below this are Site Params
 
 [params]
-description = "Tech is containers revisited"
 copyright = "Global Inc"
 privacy_policy = "https://policies.google.com/privacy"
 github_repo = "https://github.com/bep/tech-doc-hugo"
@@ -97,3 +112,5 @@ breadcrumb_disable = false
 	name = "Mailing List"
 	url = "https://example.org/mail"
 	icon = "fa fa-envelope"
+
+
