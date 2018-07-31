@@ -56,7 +56,7 @@ To configure another Google Font:
 
 ```scss
 $google_font_name: "Open Sans";
-$google_font_family: "Open+Sans:300,400,400i,700,700i";
+$google_font_family: "Open+Sans:300,300i,400,400i,700,700i";
 ```
 
 
