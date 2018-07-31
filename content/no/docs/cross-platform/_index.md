@@ -1,6 +1,6 @@
 
 ---
-title: "Flere Plattformer"
+title: "Flere plattformer"
 linkTitle: "Flerplattform"
 date: 2017-01-05
 description: >

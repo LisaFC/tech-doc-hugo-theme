@@ -1,6 +1,6 @@
 
 ---
-title: "Praktiske Eksempler"
+title: "Praktiske eksempler"
 linkTitle: "Eksempler"
 date: 2017-01-04
 description: >

@@ -1,6 +1,6 @@
 
 ---
-title: "Steg For Steg Hjelpeartikler"
+title: "Steg for steg hjelpeartikler"
 linkTitle: "Hjelpeartikler"
 date: 2017-01-04
 description: >

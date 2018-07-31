@@ -1,6 +1,6 @@
 
 ---
-title: "Store Mengder Data"
+title: "Store mengder data"
 linkTitle: "Big Data"
 date: 2017-01-01
 description: >

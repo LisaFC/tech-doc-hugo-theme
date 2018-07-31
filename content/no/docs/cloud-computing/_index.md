@@ -1,7 +1,7 @@
 
 ---
-title: "Data I Skyent"
-linkTitle: "Sky-Data"
+title: "Data i skyen"
+linkTitle: "Sky-data"
 date: 2017-01-03
 description: >
   A short lead descripton about this section page. Text here can also be **bold** or _italic_ and can even be split over multiple paragraphs.

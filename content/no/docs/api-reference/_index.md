@@ -1,7 +1,7 @@
 
 ---
-title: "Komplett API-Referance"
-linkTitle: "API-Referanse"
+title: "Komplett API-referance"
+linkTitle: "API-referanse"
 date: 2017-01-02
 description: >
   A short lead descripton about this section page. Text here can also be **bold** or _italic_ and can even be split over multiple paragraphs.

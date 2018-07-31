@@ -1,6 +1,6 @@
 
 ---
-title: "Håndtering Av Innhold"
+title: "Håndtering av innhold"
 linkTitle: "Innholdshåndtering"
 date: 2017-01-04
 description: >
