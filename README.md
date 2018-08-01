@@ -1,3 +1,9 @@
+
+## Images
+
+Images used as background images in this test site is in the [public domain](https://commons.wikimedia.org/wiki/User:Bep/gallery#Wed_Aug_01_16:16:51_CEST_2018) and can be used freely.
+
+
 # Tech Doc Hugo
 
 Hugo theme and skeleton project.
