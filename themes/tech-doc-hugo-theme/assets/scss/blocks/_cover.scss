@@ -12,11 +12,4 @@
         size: cover;
     };
 
-    @include media-breakpoint-down(lg) {
-        & {
-            background: {
-                attachment: fixed;
-            };
-        }
-    }
 }
