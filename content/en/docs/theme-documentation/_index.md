@@ -1,14 +1,14 @@
 
 ---
-title: "Docsy User Guide"
-linkTitle: "Docsy"
+title: "Theme User Guide"
+linkTitle: "Theme Docs"
 weight: 2
 date: 2018-07-30
 description: >
-  This page page describes how to use this theme: How to install it, how to configure it, and the different components it contains.
+  This page describes how to use this theme: How to install it, how to configure it, and the different components it contains.
 ---
 
-## Getting Started
+## Install Theme
 
 You need a [recent version](https://github.com/gohugoio/hugo/releases) of Hugo to run this project (if you install from the release page, make sure to get the `extended` Hugo version). Can be isntalled via Brew if you're running MacOs.
 
@@ -29,13 +29,13 @@ npm install -g autoprefixer
 
 For Hugo documentation, see [gohugo.io](https://gohugo.io/)
 
-## Site Configuration
+## Configure Site
 
 See the examples with comments in `config.toml` in this project for how to add community links, configure Google Analytics etc.
 
-## Change the Look
+## Change the Look and Feel
 
-### Color variables etc.
+### Color Palette etc.
 
 SCSS variable project overrides can be added to `assets/scss/_variables_project.scss`. A simple example changing the primary and secondary color to two shades of purple:
 
@@ -44,12 +44,10 @@ $primary: #390040;
 $secondary: #A23B72;
 ```
 
-There are lots of variables you can set:
-
 * See `assets/scss/_variables.scss` in the theme for color variables etc. that can be set to change the look and feel.
 * Also see available variables in Bootstrap 4: https://getbootstrap.com/docs/4.0/getting-started/theming/ and https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
 
-Some variables worth mentioning are:
+The theme has features suchs as rounded corners, gradient backgrounds enabled by default. These can be turned off:
 
 ```scss
 $enable-gradients: true;
@@ -63,7 +61,7 @@ PostCSS (autoprefixing of CSS browser-prefixes) is not enabled when running in s
 
 Also note that any SCSS import will try the project before the theme, so you can -- as one example -- create your own `_assets/scss/_content.scss` and get full control over how your Markdown content is styled.
 
-### Font
+### Fonts
 
 The theme uses [Open Sans](https://fonts.google.com/specimen/Open+Sans) as its primary font. To disable Google Fonts and use a system font, set this SCSS variable:
 
@@ -77,6 +75,9 @@ To configure another Google Font:
 $google_font_name: "Open Sans";
 $google_font_family: "Open+Sans:300,300i,400,400i,700,700i";
 ```
+
+Note that if you decide to go with a font with different weights (in the built-in configuration this is `300` (light), `400` (medium) and `700` (bold)), you also need to adjust the weight related variables, i.e. variables starting with `$font-weight-`.
+
 
 ## Custom Shortcodes
 
@@ -99,7 +100,7 @@ The **blocks/cover** shortcode is meant to create a landing page type of block t
 ```go-html-template
 {{</* blocks/cover title="Welcome!" image_anchor="center" height="full" color="primary" */>}}
 <div class="mx-auto">
-	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{</* absurl "docs/" */>}}">
+	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{</* relref "/docs" */>}}">
 		Learn More <i class="fas fa-arrow-alt-circle-right ml-2"></i>
 	</a>
 	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://example.org">
@@ -125,7 +126,7 @@ title
 : The main display title for the block.
 
 image_anchor
-: The anchor used when cropping the background picture. Default is **center**. See the [Hugo Docs](https://gohugo.io/content-management/image-processing/#readout)
+: The anchor used when cropping the background picture. The default is **center**. See the [Hugo Docs](https://gohugo.io/content-management/image-processing/#readout)
 
 height
 : See above.
@@ -146,7 +147,7 @@ For available icons, see [Font Awesome](https://fontawesome.com/icons?d=gallery&
 
 #### blocks/lead
 
-The **blocks/lead** block shortcode is a simple lead/title block with centered text and a arrow down pointing to the next section.
+The **blocks/lead** block shortcode is a simple lead/title block with centred text and an arrow down pointing to the next section.
 
 ```go-html-template
 {{%/* blocks/lead color="dark" */%}}
@@ -219,9 +220,7 @@ icon
 
 ## i18n
 
-All UI strings (text for buttons etc.) are bundled inside `/i18n` in the theme. Translations (e.g. create a copy of `en.toml` to `jp.toml`) should be done in the theme, so it can be reused by others. Additional strings or overridden values, can be added to the project's `/i18n` folder.
-
-
+All UI strings (text for buttons etc.) are bundled inside `/i18n` in the theme. Translations (e.g. create a copy of `en.toml` to `jp.toml`) should be done in the theme, so it can be reused by others. Additional strings or overridden values can be added to the project's `/i18n` folder.
 
 {{% alert title="Hugo Tip" %}}
 Run `hugo server --i18n-warnings` when doing translation work, as it will give you warnings on what strings are missing.
@@ -229,11 +228,11 @@ Run `hugo server --i18n-warnings` when doing translation work, as it will give y
 
 For `content`, each language can have its own language configuration and configured each its own content root, e.g. `content/en`. See the [Hugo Docs](https://gohugo.io/content-management/multilingual) on this for more information.
 
-## Add your own logo
+## Add your logo
 
 Add it to `assets/icons/logo.svg` in your project.
 
-## Add your own favicons
+## Add your favicons
 
 The easiest is to create a set of favicons via http://cthedot.de/icongen and put them inside `static/favicons` in your Hugo project.
 
@@ -242,7 +241,7 @@ If you have special requirements, you can create your own `layouts/partials/favi
 ## Configure Search
 
 1. Add you Google Custom Search Engine ID to the site params in `config.toml`. You can add different values per language if needed.
-2. Add a content file in `content/en/search.md` (and one per other language if needed). It only needs a title and `layout: search.
+2. Add a content file in `content/en/search.md` (and one per other languages if needed). It only needs a title and `layout: search.
 
 
 ## Customize Templates

@@ -12,6 +12,10 @@
         padding: $spacer;
     }
 
+     .alert-heading {
+        margin-bottom: $spacer;
+     }
+
 
     @each $color, $value in $theme-colors {
         &-#{$color} {
