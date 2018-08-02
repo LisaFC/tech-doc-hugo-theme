@@ -10,7 +10,7 @@ Hugo theme and skeleton project.
 
 ## Getting Started
 
-You need a [recent version](https://github.com/gohugoio/hugo/releases) of Hugo to run this project (if you install from the release page, make sure to get the `extended` Hugo version). Can be isntalled via Brew if you're running MacOs.
+You need a [recent version](https://github.com/gohugoio/hugo/releases) of Hugo to run this project (if you install from the release page, make sure to get the `extended` Hugo version). Can be installed via Brew if you're running macOS.
 
 ```bash
 git clone --recurse-submodules --depth 1 https://github.com/bep/tech-doc-hugo.git
