@@ -1,6 +1,6 @@
 {{ $blockID := printf "td-cover-block-%d" .Ordinal }}
 {{ $promo_image := (.Page.Resources.ByType "image").GetMatch "**background*" }}
-{{ $col_id := .Get "color" | default "primary" }}
+{{ $col_id := .Get "color" | default "dark" }}
 {{ $image_anchor := .Get "image_anchor" | default "smart" }}
 {{/* Height can be one of: auto, min, med, max, full. */}}
 {{ $height := .Get "height" | default "max"  }}

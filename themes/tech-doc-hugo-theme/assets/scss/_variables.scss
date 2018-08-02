@@ -42,7 +42,7 @@ $gray-800: #333 !default;
 $gray-900: #222 !default;
 $black: #000 !default;
 
-$code-color: $gray-700;
+$code-color: darken($secondary, 20%) !default;
 
 // UI element colors
 

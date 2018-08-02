@@ -62,6 +62,10 @@
         @extend .td-max-width-on-larger-screens;
     }
 
+    .alert:not(:first-child) {
+        margin-top: 2rem;
+    }
+
     .lead {
         margin-bottom: 1.5rem;
     }
