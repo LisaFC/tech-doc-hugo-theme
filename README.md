@@ -1,35 +1,26 @@
-
-## Images
-
-Images used as background images in this test site is in the [public domain](https://commons.wikimedia.org/wiki/User:Bep/gallery#Wed_Aug_01_16:16:51_CEST_2018) and can be used freely.
-
-
 # Tech Doc Hugo
 
 Hugo theme and skeleton project.
 
-## Getting Started
+## Installation
 
-You need a [recent version](https://github.com/gohugoio/hugo/releases) of Hugo to run this project (if you install from the release page, make sure to get the `extended` Hugo version). Can be installed via Brew if you're running macOS.
+You need a recent version of Hugo to run this project (preferably 0.45+). If you install from the [release page] (https://github.com/gohugoio/hugo/releases), make sure to get the `extended` Hugo version. Alternatively, on macOS you can install via Brew.
 
-```bash
-git clone --recurse-submodules --depth 1 https://github.com/bep/tech-doc-hugo.git
-cd tech-doc-hugo
-hugo server
-```
-
-If you want to do stylesheet changes, you will also need `PostCSS` to create the final assets. This installs the needed tools globally on your PC:
-
-```
-npm install -g postcss-cli
-npm install -g autoprefixer
-```
-
-In Hugo 0.45, you can also install it locally in the project with:
-
+If you want to do stylesheet changes, you will also need `PostCSS` to create the final assets. You can also install it locally with:
 ```
 npm install
 ````
+
+Clone the repo using:
+```
+git clone --recurse-submodules --depth 1 https://github.com/bep/tech-doc-hugo.git
+```
+
+## Running the website locally
+From the repo root folder, run:
+```
+hugo server
+```
 
 ## Customize your site
 
@@ -90,5 +81,8 @@ Similar, if you want to add some code right before the `body` end:
 layouts/partials/hooks/body-end.html
 ```
 
+## Images in this site
+
+Images used as background images in this test site are in the [public domain](https://commons.wikimedia.org/wiki/User:Bep/gallery#Wed_Aug_01_16:16:51_CEST_2018) and can be used freely.
 
 
