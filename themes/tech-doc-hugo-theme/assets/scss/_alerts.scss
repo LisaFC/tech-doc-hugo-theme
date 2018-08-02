@@ -1,21 +1,10 @@
 // Style alert boxes.
 
 .alert {
-    padding: 2rem;
     font-weight: $font-weight-medium;
-    background: $gray-100;
+    background: $white;
     color: inherit;
-    border: none;
     border-radius: 0;
-
-    @include media-breakpoint-down(md) {
-        padding: $spacer;
-    }
-
-     .alert-heading {
-        margin-bottom: $spacer;
-     }
-
 
     @each $color, $value in $theme-colors {
         &-#{$color} {
@@ -25,7 +14,7 @@
 
             border-style: solid;
             border-color: $value;
-            border-width: 4px 1px 1px 1px;
+            border-width: 0 0 0 4px;
         }
     }
 }

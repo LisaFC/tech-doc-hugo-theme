@@ -33,6 +33,30 @@ For Hugo documentation, see [gohugo.io](https://gohugo.io/)
 
 See the examples with comments in `config.toml` in this project for how to add community links, configure Google Analytics etc.
 
+## Configure Navigation
+
+### Top Level Menu
+
+Add a page or section to the top level menu by adding it to the `main` menu in either `config.toml` or in page front matter. It is ordered by its weight:
+
+```yaml
+menu:
+  main:
+    weight: 20
+```
+
+### Section Menu
+
+The section menu, as shown in the left side of the `docs` section, is automatically built from the content tree. It is ordered by page or section `weight` (the `date` if `weight` is not set).
+
+To hide a page or section from the menu, set `toc_hide: true` in front matter.
+
+By default, the section menu will show the current section fully expanded all the way down. This may make it too big for bigger sites. Try setting site param `ui.sidebar_menu_compact = true` in `config.toml`.
+
+### Disable Breadcrumb
+
+To disable breadcrumb navigation, set site param `ui.breadcrumb_disable = true` in `config.toml`.
+
 ## Change the Look and Feel
 
 ### Color Palette etc.
@@ -47,7 +71,7 @@ $secondary: #A23B72;
 * See `assets/scss/_variables.scss` in the theme for color variables etc. that can be set to change the look and feel.
 * Also see available variables in Bootstrap 4: https://getbootstrap.com/docs/4.0/getting-started/theming/ and https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
 
-The theme has features suchs as rounded corners, gradient backgrounds enabled by default. These can be turned off:
+The theme has features suchs as rounded corners and gradient backgrounds enabled by default. These can be turned off:
 
 ```scss
 $enable-gradients: true;
@@ -97,7 +121,7 @@ color
 
 The **blocks/cover** shortcode is meant to create a landing page type of block that fills the top of the page.
 
-```go-html-template
+```html
 {{</* blocks/cover title="Welcome!" image_anchor="center" height="full" color="primary" */>}}
 <div class="mx-auto">
 	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{</* relref "/docs" */>}}">
@@ -261,3 +285,4 @@ Similar, if you want to add some code right before the `body` end:
 ```
 layouts/partials/hooks/body-end.html
 ```
+	
