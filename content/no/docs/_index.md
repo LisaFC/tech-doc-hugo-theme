@@ -8,10 +8,10 @@ menu:
     weight: 20
 ---
 
-This is a landing page for a top level section.
+Dette er landingssiden til en seksjon på øverste nivå.
 
-* Summarize
-* Your section
-* Here
+* Oppsummer
+* Seksjonen din
+* Her
 
 

@@ -4,14 +4,15 @@ title: "The Inside Of Microservices: Detailed Spec"
 linkTitle: "The Inside Of Microservices"
 date: 2017-01-05
 description: >
-  A short lead descripton about this content page. Text here can also be **bold** or _italic_ and can even be split over multiple paragraphs.
+  A short lead descripton about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
+Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://gohugo.io) should be blue with no underlines (unless hovered over).
 
-There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.
+There should be whitespace between paragraphs. Lorem markdownum tempus auras formasque ore vir crescere est! Malo quod, hunc, est dura; aut haec simillima nec per conantemque iusserat audax moriensque confessasque. Haec vulneret quam libratum homo pede arbore tu manus membrisque iuveni Clymeneia se cepi unda, iustae? Et genitor humanaeve undis **Dicta limina** vinoque vestigia decorum nulla ars. Pectora sede: quoque magnum Persidaque in suos, adiciunt tenebor.
 
-There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.
+Formidine humo velle vulnera remotis admonitu suo mora vivo ubi. Libidine et mittor Orphei nulla. Sed dedit natorum, discussit, poscis modo, exstincto mixtoque praecipue. Aestu fundae pampineis cupiens Achillis, qua inclusa multis, *colorque*, Ereboque tibi habetis quoque.
+
 
 > There should be no margin above this first sentence.
 >
@@ -19,24 +20,18 @@ There should be whitespace between paragraphs. There should be whitespace betwee
 >
 > There should be no margin below this final sentence.
 
-## First Header
+## First Header 2
 
-This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.  Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.  Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+This is a normal paragraph following a header. Victrix tridentigero corripuere messibus, una rector, me se Iovis. *Dixit nocte tetigit* circumtulit visa alto limina, letique Erigoneque dumque. Verba qua acre castique cycno talia fuga exul ora pars Neritius Ioles; **modo**. Solacia fores servat querno tamen! Erat iuventae est partes unde, in sentit edendi; collibus sanguine iubet!
 
-
-
-Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+Deae legum paulatimque terra, non vos mutata tacet: dic. Vocant docuique me plumas fila quin afuerunt copia haec o neque.
 
 On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.
 
-Lorem markdownum tuta hospes stabat; idem saxum facit quaterque repetito
-occumbere, oves novem gestit haerebat frena; qui. Respicit recurvam erat:
-pignora hinc reppulit nos **aut**, aptos, ipsa.
+Erat vera cur scelus mundo quam? Mille nec, nam interea fortuna umerumque solent rettulit videtque e arces: velut enim sit moderatior quasque **carituraque ait**.
 
-Meae optatos *passa est* Epiros utiliter *Talibus niveis*, hoc lata, edidit.
-Dixi ad aestum.
 
-## Header 2
+## Second Header 2
 
 > This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
 
@@ -45,6 +40,9 @@ Dixi ad aestum.
 ```
 This is a code block following a header.
 ```
+
+Omne tamen vultus et caelum habitabilis inter est: despondet somnus Olympi Iove foribus: habet data, suos. Suis illi auro verba sibi os Turno. Oris avis mariti callida deficis tangor.
+
 
 #### Header 4
 
@@ -74,27 +72,27 @@ There's a horizontal rule above and below this.
 
 Here is an unordered list:
 
-* Salt-n-Pepa
-* Bel Biv DeVoe
-* Kid 'N Play
+* Liverpool F.C.
+* Chelsea F.C.
+* Manchester United F.C.
 
 And an ordered list:
 
-1. Michael Jackson
-2. Michael Bolton
-3. Michael Bublé
+1. Michael Brecker
+2. Seamus Blake
+3. Branford Marsalis
 
 And an unordered task list:
 
-- [x] Create a sample markdown document
+- [x] Create a Hugo theme
 - [x] Add task lists to it
 - [ ] Take a vacation
 
 And a "mixed" task list:
 
-- [ ] Steal underpants
+- [ ] Pack bags
 - ?
-- [ ] Profit!
+- [ ] Travel!
 
 And a nested list:
 
@@ -110,7 +108,7 @@ And a nested list:
   * Donatello
   * Raphael
 
-Definition lists can be used with Markdown syntax. Definition terms are bold.
+Definition lists can be used with Markdown syntax. Definition headers are bold.
 
 Name
 : Godzilla
@@ -189,54 +187,48 @@ Inline code inside table cells should still be distinguishable.
 
 Small images should be shown at their actual size.
 
-![](http://placekitten.com/g/300/200/)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/240px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg)
 
 Large images should always scale down and fit in the content container.
 
-![](http://placekitten.com/g/1200/800/)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/1024px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg)
+
+_The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA._
+
 
 ## Components
 
 ### Alerts
 
 {{< alert >}}This is an alert.{{< /alert >}}
-{{< alert title="Note:" >}}This is an alert with a title.{{< /alert >}}
+{{< alert title="Note" >}}This is an alert with a title.{{< /alert >}}
+{{% alert title="Note" %}}This is an alert with a title and **Markdown**.{{% /alert %}}
 {{< alert type="success" >}}This is a successful alert.{{< /alert >}}
-{{< alert type="warning" >}}This is a warning!{{< /alert >}}
-{{< alert type="warning" title="Warning!" >}}This is a warning with a title!{{< /alert >}}
+{{< alert type="warning" >}}This is a warning.{{< /alert >}}
+{{< alert type="warning" title="Warning" >}}This is a warning with a title.{{< /alert >}}
 
 
-## Sizing
+## Another Heading
 
 Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
 
-### Parameters available
+### This Document
 
-Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+Inguina genus: Anaphen post: lingua violente voce suae meus aetate diversi. Orbis unam nec flammaeque status deam Silenum erat et a ferrea. Excitus rigidum ait: vestro et Herculis convicia: nitidae deseruit coniuge Proteaque adiciam *eripitur*? Sitim noceat signa *probat quidem*. Sua longis *fugatis* quidem genae.
 
-### Using pixels
 
-Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+### Pixel Count
 
-### Using rem
+Doloris decurrere vitae Ida Arcades matres de remisit polypus, introrsus et sed qua maerenti? Serpit meta illic ut sinu. Transformat ungues genitor, et visis ademit sustinet abstulit lampadibus. Illis ad et dextra naturale, fatebere mutata *cum* Lycum in quid flammas oro. Populus Aurora caerula et feremus clavigeri ungues dubitant et inde corpore clamat, qui non Ilioneus pugnat abstuleris undas, habet.
 
-Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+### Contact Info
 
-## Memory
+Factum Perseus est brevis abdita Odrysius, quod contendere urbes misceat accessit nudum oris non. Cumque dentibus nullam nec mille potentia regnumque supplex!
 
-Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
 
-### RAM to use
+### External Links
 
-Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
-
-### More is better
-
-Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
-
-### Used RAM
-
-Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+Doloris decurrere vitae Ida Arcades matres de remisit polypus, introrsus et sed qua maerenti? Serpit meta illic ut sinu. Transformat ungues genitor, et visis ademit sustinet abstulit lampadibus. Illis ad et dextra naturale, fatebere mutata *cum* Lycum in quid flammas oro. Populus Aurora caerula et feremus clavigeri ungues dubitant et inde corpore clamat, qui non Ilioneus pugnat abstuleris undas, habet.
 
 
 

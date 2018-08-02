@@ -4,12 +4,13 @@ title: "Praktiske eksempler"
 linkTitle: "Eksempler"
 date: 2017-01-03
 description: >
-  A short lead descripton about this section page. Text here can also be **bold** or _italic_ and can even be split over multiple paragraphs.
+  En kort oppsummering av denne siden. Tekst kan **utheves** sller skrives i _kursiv_ og kan ha flere avsnitt.
 ---
 
-This is the section landing page.
+Dette er landingssiden til en seksjon et sted nede i seksjonshierarkiet.
 
-* Summarize
-* Your section
-* Here
+* Oppsummer
+* Seksjonen din
+* Her
+
 

@@ -1,15 +1,21 @@
-// Style alert boxes. 
+// Style alert boxes.
 
 .alert {
     padding: 2rem;
     font-weight: $font-weight-medium;
+    background: $gray-100;
+    color: inherit;
+    border: none;
+    border-radius: 0;
 
-    // Saturate the theme colors to make them stand out a little.
     @each $color, $value in $theme-colors {
         &-#{$color} {
-            $bg: saturate($value, 20%);
-            color: color-yiq($bg);
-            background: $bg;
+            & .alert-heading {
+                color: $value;
+            }
+            border-style: solid;
+            border-color: $value;
+            border-width: 4px 1px 1px 1px;
         }
     }
 }
