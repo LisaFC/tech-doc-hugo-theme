@@ -6,6 +6,10 @@ weight: 2
 date: 2018-07-30
 description: >
   This page describes how to use this theme: How to install it, how to configure it, and the different components it contains.
+resources:
+- src: "**spruce*.jpg"
+  params:
+    byline: "Photo: Bjørn Erik Pedersen / CC-BY-SA"
 ---
 
 ## Install Theme
@@ -32,6 +36,18 @@ For Hugo documentation, see [gohugo.io](https://gohugo.io/)
 ## Configure Site
 
 See the examples with comments in `config.toml` in this project for how to add community links, configure Google Analytics etc.
+
+## Content Sections
+
+The theme comes with templates for the top level sections `docs` and `blog`, and a default landing page type of template for any other section.
+
+### RSS Feeds
+
+Hugo will, by default, create an RSS feed for the home age and any section. For the main RSS feed you can control which sections to include by setting a site param in your `config.toml`. This is the default configuration:
+
+```toml
+rss_sections = ["blog"]
+```
 
 ## Configure Navigation
 
@@ -144,28 +160,20 @@ Note that the relevant shortcode parameters above will have sensible defaults, b
 > Using the bracket styled shortcode delimiter, `>}}`, tells Hugo that the inner content is HTML/plain text and needs no further processing. Changing it to `%}}` will treat it as Markdown. These can be mixed.
 {{% /alert %}}
 
-Parameters:
 
-title
-: The main display title for the block.
-
-image_anchor
-: The anchor used when cropping the background picture. The default is **center**. See the [Hugo Docs](https://gohugo.io/content-management/image-processing/#readout)
-
-height
-: See above.
-
-color
-: See above.
+| Parameter        | Default    | Description  |
+| ---------------- |------------| ------------|
+| title | | The main display title for the block. | 
+| image_anchor | |
+| height | | See above.
+| color | | See above. 
 
 
 To set the background image, place an image with the word "background" in the name inside the [Page Bundle](https://gohugo.io/content-management/page-bundles/).
 
-
 {{% alert title="Tip" %}}
 If you also include the word **featured** in the image name, e.g. `my-featured-background.jpg`, it will also be used as the Twitter Card image when shared.
 {{% /alert %}}
-
 
 For available icons, see [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free).
 
@@ -181,17 +189,14 @@ Runs on **bare metal** in the **cloud**!
 {{%/* /blocks/lead */%}}
 ```
 
-Parameters:
-
-height
-: See above.
-
-color
-: See above.
+| Parameter        | Default    | Description  |
+| ---------------- |------------| ------------|
+| height | | See above.
+| color | | See above. 
 
 #### blocks/section
 
-The **section** shortcode is meant as a general-purpose content container. The example below shows it wrapping 3 feature sections.
+The **blocks/section** shortcode is meant as a general-purpose content container. The example below shows it wrapping 3 feature sections.
 
 
 ```go-html-template
@@ -209,13 +214,10 @@ For announcement of latest features etc.
 {{</* /blocks/section */>}}
 ```
 
-Parameters:
-
-height
-: See above.
-
-color
-: See above.
+| Parameter        | Default    | Description  |
+| ---------------- |------------| ------------|
+| height | | See above.
+| color | | See above. 
 
 
 #### blocks/feature
@@ -228,18 +230,83 @@ We do a [Pull Request](https://github.com/gohugoio/hugo/pulls) contributions wor
 
 ```
 
-Parameters
+| Parameter        | Default    | Description  |
+| ---------------- |------------| ------------|
+| title | | The title to use.
+| url | | The URL to link to.
+| icon | | The icon class to use.
 
-title
-: The title to use.
 
-url
-: The URL to link to.
+#### blocks/link-down
 
-icon
-: The icon class to use.
+The **blocks/link-down** shortcode creates a navigation link down to the next section. It's meant to be used in combination with the other blocks shortcodes.
+
+```go-html-template
+
+<div class="mx-auto mt-5">
+	{{</* blocks/link-down color="info" */>}}
+</div>
+```
+
+| Parameter        | Default    | Description  |
+| ---------------- |------------| ------------|
+| color | info | See above. 
 
 ### Shortcode Helpers
+
+####  alert
+
+THe **alert** shortcode creates an alert block that can be used to display notices or warnings.
+
+```go-html-template
+{{%/* alert title="Warning" color="warning" */%}}
+This is a warning.
+{{%/* /alert */%}}
+
+```
+
+Renders to:
+
+{{% alert title="Warning" color="warning" %}}
+This is a warning.
+{{% /alert %}}
+
+| Parameter        | Default    | Description  |
+| ---------------- |------------| ------------|
+| color | primary | One of the theme colors, eg `primary`, `info`, `warning` etc.
+
+
+####  imgproc
+
+The **imgproc** shortcode finds an image in the current [Page Bundle](https://gohugo.io/content-management/page-bundles/) and scales it given a set of processing instructions.
+
+
+```go-html-template
+{{</* imgproc spruce Fill "400x450" */>}}
+Norway Spruce Picea abies shoot with foliage buds.
+{{</* /imgproc */>}}
+```
+
+{{< imgproc spruce Fill "400x450" >}}
+Norway Spruce Picea abies shoot with foliage buds.
+{{< /imgproc >}}
+
+The example above has also a byline with photo attribution added. When using illustrations with a free license from [WikiMedia](https://commons.wikimedia.org/) and simlilar, you will in most situations need a way to attribute the author or licensor. You can add metadata to your page resources in the page front matter. The `byline` param is used by convention in this theme:
+
+
+```yaml
+resources:
+- src: "**spruce*.jpg"
+  params:
+    byline: "Photo: Bjørn Erik Pedersen / CC-BY-SA"
+```
+
+
+| Parameter        | Description  |
+| ----------------: |------------|
+| 1 | The image filename or enough of it to identify it (we do Glob matching)
+| 2 | Command. One of `Fit`, `Resize` or `Fill`. See [Image Processing Methods](https://gohugo.io/content-management/image-processing/#image-processing-methods).
+| 3 | Processing options, e.g. `400x450`. See [Image Processing Options](https://gohugo.io/content-management/image-processing/#image-processing-methods).
 
 
 ## i18n

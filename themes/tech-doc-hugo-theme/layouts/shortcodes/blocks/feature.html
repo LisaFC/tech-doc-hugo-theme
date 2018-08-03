@@ -5,5 +5,5 @@
   </div>
   <h4 class="h3">{{ .Get "title" | markdownify }}</h4>
   <p class="mb-0">{{ .Inner }}</p>
-  {{ with .Get "url" }}<p><a href="{{ . }}">Read More ...</a></p>{{ end }}
+  {{ with .Get "url" }}<p><a href="{{ . }}">{{ T "ui_read_more" }} …</a></p>{{ end }}
 </div>

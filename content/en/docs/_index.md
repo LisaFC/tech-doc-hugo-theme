@@ -1,6 +1,6 @@
 
 ---
-title: "Theme Documentation"
+title: "TechOS Documentation"
 linkTitle: "Documentation"
 weight: 20
 menu:
