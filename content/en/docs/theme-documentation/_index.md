@@ -352,4 +352,11 @@ Similar, if you want to add some code right before the `body` end:
 ```
 layouts/partials/hooks/body-end.html
 ```
+
+## Images used on this site
+
+Images used as background images in this example site are in the [public domain](https://commons.wikimedia.org/wiki/User:Bep/gallery#Wed_Aug_01_16:16:51_CEST_2018) and can be used freely.
+
+
+
 	
