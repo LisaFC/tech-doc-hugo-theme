@@ -14,7 +14,6 @@
 
     }
 
-
     &.navbar-bg-onscroll .nav-link {
         text-shadow: none;
     }
@@ -73,20 +72,26 @@
 
     @include media-breakpoint-down(md) {
         padding-right: .5rem;
-        padding-left: .5rem;
+        padding-left: .75rem;
 
-        .navbar-nav-scroll {
+        .td-navbar-nav-scroll {
             max-width: 100%;
             height: 2.5rem;
             margin-top: .25rem;
             overflow: hidden;
             font-size: .875rem;
 
+            .nav-link {
+                padding-right: .25rem;
+                padding-left: 0;
+            }
+
             .navbar-nav {
                 padding-bottom: 2rem;
                 overflow-x: auto;
                 white-space: nowrap;
                 -webkit-overflow-scrolling: touch;
+
             }
         }
     }
