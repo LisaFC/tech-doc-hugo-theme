@@ -15,16 +15,7 @@
 			{{ end }}
 			{{ if  (gt (len .Site.Home.Translations) 0) }}
 			<li class="nav-item dropdown d-none d-lg-block">
-				{{/* Link directly to documentation etc., if possible. */}}
-				{{ $langPage := cond (gt (len .Translations) 0) . .Site.Home }}
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					{{ $langPage.Language.LanguageName }}
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					{{ range $langPage.Translations }}
-					<a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
-					{{ end }}
-				</div>
+				{{ partial "navbar-lang-selector.html" . }}
 			</li>
 			{{ end }}
 		</ul>
