@@ -22,7 +22,12 @@ git submodule add TODO(bep)
 git submodule update --init --recursive
 ```
 
-If you want to do stylesheet changes, you will also need `PostCSS` to create the final assets. Navigate to the theme and run `npm install`.
+If you want to do stylesheet changes, you will also need `PostCSS` to create the final assets:
+
+```
+npm install -D --save autoprefixer
+npm install -D --save postcss-cli
+```
 
 You can also install these tools globally on your computer:
 
@@ -309,13 +314,49 @@ resources:
 | 3 | Processing options, e.g. `400x450`. See [Image Processing Options](https://gohugo.io/content-management/image-processing/#image-processing-methods).
 
 
-## i18n
+## CSS Utilitiies
+
+For documentation of available CSS utility classes, see the [Bootstrap Documentation](https://getbootstrap.com/). This theme adds very little on its own in this area. But we have added some some color state CSS classes that can be useful in a dynamic context (when you don't know if the `primary` color is dark or light or you receive the color code as a shortcode parameter):
+
+* `.-bg-<color>`
+* `.-text-<color>`
+
+The value of `<color>` can be any of the color names, `primary`, `white`, `dark`, `warning`, `light`, `success`, `300`, `blue`, `orange` etc.
+
+For `.-bg-<color>`, the text colors will be adjusted to get proper contrast:
+
+```html
+<div class="-bg-primary p-3 display-4">Background: Primary</div>
+<div class="-bg-200 p-3 display-4">Background: Gray 200</div>
+```
+
+<div class="-bg-primary p-3 display-4 w-75">Background: Primary</div>
+<div class="-bg-200 p-3 display-4 mb-5 w-50 w-75">Background: Gray 200</div>
+
+`.-text-<color>` sets the text color only:
+
+```html
+<div class="-text-blue pt-3 display-4">Text: Blue</div>
+```
+
+<div class="-text-blue pt-3 display-4">Text: Blue</div>
+
+
+## Multilingual
+
+### Navigation
+
+If you configure more than one language in `config.toml, a language selector will be added to the top-level menu. It will take you to the translated version of the current page, or the home page for the given language.
+
+### i18n bundles
 
 All UI strings (text for buttons etc.) are bundled inside `/i18n` in the theme. Translations (e.g. create a copy of `en.toml` to `jp.toml`) should be done in the theme, so it can be reused by others. Additional strings or overridden values can be added to the project's `/i18n` folder.
 
 {{% alert title="Hugo Tip" %}}
 Run `hugo server --i18n-warnings` when doing translation work, as it will give you warnings on what strings are missing.
 {{% /alert %}}
+
+### Content
 
 For `content`, each language can have its own language configuration and configured each its own content root, e.g. `content/en`. See the [Hugo Docs](https://gohugo.io/content-management/multilingual) on this for more information.
 
